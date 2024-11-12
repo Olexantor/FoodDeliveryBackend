@@ -1,0 +1,57 @@
+При запущенном приложении Docker открыть в терминале директорию с проектом Vapor и выполнить
+docker-compose up db
+
+Он создаст БД.
+
+Чтобы посмотреть содержание БД созданной в докере на Postgres и Vapor нужно:
+1. Запустить DBeaver
+2. Нажать в верхнем левом углу иконку штепселя с +
+3. Выбрать из списка PostgreSQL, нажать далее
+4. В строке "База данных" ввести имя нашей БД fd_database, далее заполнить поля "Пользователь" fd_username и "Пароль" fd_password, нажать "Finish"
+В таблицах можно будет увидеть созданные приложением таблицы
+
+Ну и поскольку во флудилке мне написали, что план по передаче друг другу контейнера с БД - не реализуем, то с помощью постмана выполняем несколько запросов типа post: http://127.0.0.1:8080/categories
+Там в body выбираем x-www-form-urlencoded и заполняем key/value нужными данными и выполняем запрос
+[
+    {
+        "image": "https://img.freepik.com/free-photo/chicken-caesar-salad-table_140725-4536.jpg?t=st=1731387018~exp=1731390618~hmac=7efda6ddde46b24cceda5ad016ff0b8775ba2f53c896ce4953e86ca36bc709f2&w=740",
+        "stars": 4.9,
+        "title": "Main Dishes",
+        "promotionalOffer": "FREE DRINK",
+        "id": "FD8113B7-5FB0-44AA-AC3F-564D0727B67D",
+        "priceStartsAt": 2500,
+        "ratingsCount": 355
+    },
+    {
+        "promotionalOffer": null,
+        "priceStartsAt": 2000,
+        "id": "CCB21E98-D919-4D8A-A45C-4D093014F99D",
+        "title": "Best Sellers",
+        "ratingsCount": 105,
+        "image": "https://img.freepik.com/free-photo/meat-lasagna-with-tomato-pepper_140725-8622.jpg?t=st=1731387891~exp=1731391491~hmac=e9eb1c3adc4ccd98b6846836b65f675dbbcbb4fbb8657a11376edfcee47e300d&w=740",
+        "stars": 4.8
+    },
+    {
+        "title": "Discounted Offers",
+        "image": "https://avatars.mds.yandex.net/i?id=1a06302167d1d2a99dab01f9f3209fc3_l-5858922-images-thumbs&n=13",
+        "id": "DF94B08B-D13E-4B99-87F0-65E727CFE596",
+        "promotionalOffer": null,
+        "stars": 4.6,
+        "ratingsCount": 500,
+        "priceStartsAt": 500
+    },
+    {
+        "id": "2EC3E5AC-05CB-4747-840C-D2D25EDE2487",
+        "title": "Meal Plans",
+        "ratingsCount": 500,
+        "stars": 5,
+        "priceStartsAt": 30000,
+        "promotionalOffer": null,
+        "image": "https://shkolalempinskaya-r86.gosweb.gosuslugi.ru/netcat_files/96/424/pitanie.jpg"
+    }
+]
+
+В запросах где null - просто поле из запроса удаляем.
+Потом можно смотреть в DBeaver как база заполняется. И по итогу вызов get запроса: http://127.0.0.1:8080/categories
+
+Вернет нам массив категорий
