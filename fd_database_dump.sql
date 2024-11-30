@@ -66,10 +66,10 @@ COPY public._fluent_migrations (id, name, batch, created_at, updated_at) FROM st
 --
 
 COPY public.categories (id, title, image, "ratingsCount", stars, "priceStartsAt", "promotionalOffer") FROM stdin;
-fd8113b7-5fb0-44aa-ac3f-564d0727b67d	Main Dishes	https://img.freepik.com/free-photo/chicken-caesar-salad-table_140725-4536.jpg?t=st=1731387018~exp=1731390618~hmac=7efda6ddde46b24cceda5ad016ff0b8775ba2f53c896ce4953e86ca36bc709f2&w=740	355	4.9	2500	FREE DRINK
-ccb21e98-d919-4d8a-a45c-4d093014f99d	Best Sellers	https://img.freepik.com/free-photo/meat-lasagna-with-tomato-pepper_140725-8622.jpg?t=st=1731387891~exp=1731391491~hmac=e9eb1c3adc4ccd98b6846836b65f675dbbcbb4fbb8657a11376edfcee47e300d&w=740	105	4.8	2000	\N
-df94b08b-d13e-4b99-87f0-65e727cfe596	Discounted Offers	https://avatars.mds.yandex.net/i?id=1a06302167d1d2a99dab01f9f3209fc3_l-5858922-images-thumbs&n=13	500	4.6	500	\N
-2ec3e5ac-05cb-4747-840c-d2d25ede2487	Testable Name	https://shkolalempinskaya-r86.gosweb.gosuslugi.ru/netcat_files/96/424/pitanie.jpg	500	5	30000	\N
+fd8113b7-5fb0-44aa-ac3f-564d0727b67d	Main Dishes	https://hi-news.ru/wp-content/uploads/2023/05/food_photo_1-750x476.jpg	355	4.9	2500	FREE DRINK
+ccb21e98-d919-4d8a-a45c-4d093014f99d	Best Sellers	https://interiorscafe.ru/wp-content/uploads/populyarnyye-suyeveriya-o-yede-11.jpg	105	4.8	2000	\N
+df94b08b-d13e-4b99-87f0-65e727cfe596	Discounted Offers	https://img.freepik.com/free-vector/hanging-style-red-discount-tag-template-price-clearance-vector_1017-46271.jpg?semt=ais_hybrid	500	4.6	500	\N
+2ec3e5ac-05cb-4747-840c-d2d25ede2487	Meal Plans	https://shkolalempinskaya-r86.gosweb.gosuslugi.ru/netcat_files/96/424/pitanie.jpg	500	5	30000	\N
 \.
 
 
