@@ -18,6 +18,7 @@ public func configure(_ app: Application) async throws {
     ), as: .psql)
 
     app.migrations.add(CreateCategory())
+    app.migrations.add(CreateDish())
     try await app.autoMigrate().get()
     
     // register routes

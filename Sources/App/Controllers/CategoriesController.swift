@@ -9,7 +9,6 @@ import Fluent
 import Vapor
 
 struct CategoriesController: RouteCollection {
-    
     func boot(routes: any Vapor.RoutesBuilder) throws {
         let categoriesGroup = routes.grouped("categories")
         categoriesGroup.post(use: createHandler)

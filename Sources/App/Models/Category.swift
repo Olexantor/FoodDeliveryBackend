@@ -30,7 +30,7 @@ final class Category: Model, Content, @unchecked Sendable {
         ratingsCount: Int,
         stars: Double,
         priceStartsAt: Int,
-        promotionalOffer: String?
+        promotionalOffer: String? = nil
     ) {
         self.id = id
         self.title = title
