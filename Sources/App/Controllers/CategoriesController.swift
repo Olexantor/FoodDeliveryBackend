@@ -10,7 +10,7 @@ import Vapor
 
 struct CategoriesController: RouteCollection {
     func boot(routes: any Vapor.RoutesBuilder) throws {
-        let categoriesGroup = routes.grouped("categories")
+        let categoriesGroup = routes.grouped("api","categories")
         categoriesGroup.post(use: createHandler)
         categoriesGroup.get(use: getAllHandler)
     }

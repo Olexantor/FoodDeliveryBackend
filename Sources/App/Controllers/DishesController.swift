@@ -10,7 +10,8 @@ import Vapor
 
 struct DishesController: RouteCollection {
     func boot(routes: any Vapor.RoutesBuilder) throws {
-        let dishesGroup = routes.grouped("dishes")
+        let dishesGroup = routes.grouped("api", "dishes")
+        
         dishesGroup.post(use: createHandler)
         dishesGroup.get(use: getAllHandler)
         dishesGroup.get(":categoryID", use: getDishesByCategoryHandler)
